@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/t/typed-ast/typed-ast-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/t/typed_ast/typed_ast-{{ version }}.tar.gz
   sha256: 66480f95b8167c9c5c5c87f32cf437d585937970f3fc24386f313a4c97b44e34
 
 build:
