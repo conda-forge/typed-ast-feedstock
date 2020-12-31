@@ -10,7 +10,7 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py2k]
 
 requirements:
@@ -27,10 +27,14 @@ requirements:
 test:
   imports:
     - typed_ast
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/python/typed_ast
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
   summary: a fork of Python 2 and 3 ast modules with type comment support
