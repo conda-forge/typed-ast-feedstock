@@ -3,7 +3,7 @@ About typed-ast
 
 Home: https://github.com/python/typed_ast
 
-Package license: Apache 2.0
+Package license: Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/typed-ast-feedstock/blob/master/LICENSE.txt)
 
