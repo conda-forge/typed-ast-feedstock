@@ -1,4 +1,4 @@
-{% set version = "1.4.1" %}
+{% set version = "1.4.2" %}
 
 package:
   name: typed-ast
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/typed_ast/typed_ast-{{ version }}.tar.gz
-  sha256: 8c8aaad94455178e3187ab22c8b01a3837f8ee50e09cf31f1ba129eb293ec30b
+  sha256: 9fc0b3cb5d1720e7141d103cf4819aea239f7d136acf9ee4a69b047b7986175a
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  skip: True  # [py2k]
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [py2k]
 
 requirements:
   build:
@@ -27,10 +27,14 @@ requirements:
 test:
   imports:
     - typed_ast
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/python/typed_ast
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
   summary: a fork of Python 2 and 3 ast modules with type comment support
