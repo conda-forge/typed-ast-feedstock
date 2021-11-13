@@ -1,4 +1,4 @@
-{% set version = "1.4.3" %}
+{% set version = "1.5.0" %}
 
 package:
   name: typed-ast
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/typed_ast/typed_ast-{{ version }}.tar.gz
-  sha256: fb1bbeac803adea29cedd70781399c99138358c26d05fcbd23c13016b7f5ec65
+  sha256: ff4ad88271aa7a55f19b6a161ed44e088c393846d954729549e3cde8257747bb
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py2k]
 
